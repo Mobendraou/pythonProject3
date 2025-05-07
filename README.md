@@ -45,6 +45,3 @@ Analyze Waze app usage data to:
 - Segment users by behavior (e.g., "high-distance drivers", "infrequent users").
 - Analyze temporal trends (e.g., usage decay over months).
 
-## 📚 Dataset Notes
-- Ensure `waze_dataset.csv` includes columns like `sessions`, `drives`, `label` (churn status), and `device`.
-- Missing data? The script assumes clean data; preprocess if needed.
