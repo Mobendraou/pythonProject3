@@ -13,3 +13,38 @@ This project analyzes user behavior data from the Waze app to understand pattern
 - Libraries:
   ```bash
   pandas matplotlib seaborn
+
+  
+# Project Idea: Waze User Behavior Analysis
+
+## 🎯 Objective
+Analyze Waze app usage data to:
+1. Understand user engagement patterns.
+2. Identify factors influencing churn (user attrition).
+3. Derive actionable insights to improve retention.
+
+## 🔍 Key Questions
+1. How are user sessions and drives distributed? Are there outliers?
+2. What’s the churn rate based on driving frequency or distance?
+3. Do users with more recent activity (`percent_sessions_in_last_month`) churn less?
+
+## 📊 Analysis Approach
+- **Descriptive Statistics**: Median, percentiles, and distributions.
+- **Visual EDA**: Box plots, histograms, and scatter plots.
+- **Feature Engineering**:
+  - `km_per_driving_day`: Normalizes distance by activity.
+  - `monthly_drives_per_session_ratio`: Measures drive frequency per session.
+
+## 🛠️ Technical Implementation
+- **Outlier Handling**: Values above the 95th percentile are capped to reduce skew.
+- **Visualization**: Seaborn/Matplotlib for clear, interpretable plots.
+- **Modular Code**: Helper functions like `histogrammer()` and `outlier_imputer()` for reusability.
+
+## 💡 Potential Extensions
+- Predict churn using machine learning (logistic regression, Random Forest).
+- Segment users by behavior (e.g., "high-distance drivers", "infrequent users").
+- Analyze temporal trends (e.g., usage decay over months).
+
+## 📚 Dataset Notes
+- Ensure `waze_dataset.csv` includes columns like `sessions`, `drives`, `label` (churn status), and `device`.
+- Missing data? The script assumes clean data; preprocess if needed.
