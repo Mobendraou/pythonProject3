@@ -40,8 +40,5 @@ Analyze Waze app usage data to:
 - **Visualization**: Seaborn/Matplotlib for clear, interpretable plots.
 - **Modular Code**: Helper functions like `histogrammer()` and `outlier_imputer()` for reusability.
 
-## 💡 Potential Extensions
-- Predict churn using machine learning (logistic regression, Random Forest).
-- Segment users by behavior (e.g., "high-distance drivers", "infrequent users").
-- Analyze temporal trends (e.g., usage decay over months).
+
 
